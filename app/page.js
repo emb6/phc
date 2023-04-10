@@ -7,7 +7,7 @@ import Talks from "@/components/Talks";
 import Clients from "@/components/Clients";
 import { faq, clients } from "@/constant/home.constant";
 import AboutProduct from "@/components/Products";
-import ProductDetailTab from "@/components/ProductDetailTab";
+import ProductDetailTab from "@/components/ProductDetails";
 
 const inter = Inter({ subsets: ["latin"] });
 
