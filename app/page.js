@@ -8,6 +8,7 @@ import Faq from "@/components/Faq";
 import Talks from "@/components/Talks";
 import Clients from "@/components/Clients";
 import { faq, clients } from "@/constant/home.constant";
+import AboutProduct from "@/components/AboutProduct";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Perks />
+      <AboutProduct />
       <Talks />
       <Faq data={faq} />
       <Clients data={clients} />
