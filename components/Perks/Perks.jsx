@@ -20,7 +20,7 @@ export default function Perks() {
                 <Delivery className="w-12 md:w-16 m-auto" />
               </div>
               <h3
-                className={`${poppins.className} text-sm md:text-xl font-bold mb-5`}
+                className={`${poppins.className} text-primary-orange text-sm md:text-xl font-bold mb-5`}
               >
                 FREE SHIPPING
               </h3>
@@ -34,7 +34,7 @@ export default function Perks() {
                 <MoneyBack className="w-20  m-auto" />
               </div>
               <h3
-                className={`${poppins.className} text-sm md:text-xl font-bold mb-5`}
+                className={`${poppins.className} text-primary-orange text-sm md:text-xl font-bold mb-5`}
               >
                 MONEY BACK GUARANTEE
               </h3>
@@ -48,7 +48,7 @@ export default function Perks() {
                 <Discount className="w-12 md:w-16 m-auto" />
               </div>
               <h3
-                className={`${poppins.className} text-sm md:text-xl font-bold mb-5`}
+                className={`${poppins.className} text-primary-orange text-sm md:text-xl font-bold mb-5`}
               >
                 GIFT DISCOUNT
               </h3>

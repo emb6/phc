@@ -21,7 +21,7 @@ function Talks() {
     autoplaySpeed: 3000,
     appendDots: (dots) => (
       <div>
-        <ul className="m-0 lg:pt-36 [&>li]:!w-auto [&>li>div]:bg-secondary-gray [&>li.slick-active>div]:bg-primary-green ">
+        <ul className="m-0 lg:pt-36 [&>li]:!w-auto [&>li>div]:bg-secondary-gray [&>li.slick-active>div]:bg-primary-orange ">
           {" "}
           {dots}{" "}
         </ul>
@@ -30,7 +30,7 @@ function Talks() {
     customPaging: (i) => <div className="h-1 w-10"></div>,
   };
   return (
-    <section className="bg-white relative overflow-hidden">
+    <section className="bg-white relative overflow-hidden py-20">
       {/* <GradArrow className="absolute left-0 h-full" /> */}
       <div className="max-w-7xl mx-auto px-4 py-5 lg:px-10 lg:py-16">
         <h2
@@ -39,8 +39,8 @@ function Talks() {
           Don&apos;t take just &apos;OUR&apos; word for it
         </h2>
 
-        <Slider {...settings} className="lg:pb-16 bg-primary-purple">
-          <div className="slide-custom bg-slate-400">
+        <Slider {...settings} className="lg:pb-16 ">
+          <div className="slide-custom">
             <div className="flex justify-center">
               <div className="w-[106px] md:w-[200px] lg:w-[358px]">
                 <img
@@ -79,7 +79,7 @@ function Talks() {
               </div>
             </div>
           </div>
-          <div className="slide-custom bg-red-400">
+          <div className="slide-custom ">
             <div className="flex">
               <div className="max-w-[106px] lg:max-w-[358px]">
                 <img
@@ -120,7 +120,7 @@ function Talks() {
               </div>
             </div>
           </div>
-          <div className="slide-custom bg-orange-300">
+          <div className="slide-custom ">
             <div className="flex">
               <div className="max-w-[106px] lg:max-w-[358px]">
                 <img

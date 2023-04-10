@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="relative z-10 py-6 md:py-12">
               <h1 className="w-[80%] text-primary-gray  lg:max-w-3xl font-semibold text-3xl lg:text-6xl lg:leading-[70px]">
                 Build Your{" "}
-                <span className="text-primary-purple"> Perfect Body </span> With
+                <span className="text-primary-orange"> Perfect Body </span> With
                 Us
               </h1>
               <p className="text-xl text-primary-gray mt-4 hidden lg:block lg:max-w-lg">
