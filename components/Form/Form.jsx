@@ -149,6 +149,12 @@ export default function Form() {
                   />
                 </div>
               </div>
+              <div class="flex flex-wrap text-start -mx-3 mb-6 px-5">
+                <label class="md:w-2/3 block text-gray-500 font-bold">
+                  <input class="mr-2 leading-tight" type="checkbox" checked />
+                  <span class="text-sm">Send me your newsletter!</span>
+                </label>
+              </div>
               <div class="flex flex-wrap text-center -mx-3 mb-6 ">
                 <div class="w-full px-3">
                   <button
