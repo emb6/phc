@@ -10,31 +10,46 @@ const poppins = Poppins({
 
 const Hero = () => {
   return (
-    <div className="w-full py-4 md:py-8">
-      <div className="w-full max-w-7xl px-4 lg:flex lg:items-center lg:justify-between mx-auto">
-        <div className="h-full w-full md:flex max-w-xl lg:order-2 px-4 mx-auto lg:mx-0 mb-8 mt-14 sm:mb-14 lg:my-0">
-          <div
-            width={662}
-            height={563}
-            className="pt-[84.9609375%] max-w-lg mx-auto"
-          />
+    <section className={`${poppins.className}`}>
+      <div
+        className="bg-white relative z-40 py-20"
+        // style={{
+        //   backgroundImage: "url(slider_img_bg.png)",
+        // }}
+      >
+        <div
+          className="lg:hidden relative pt-[50.256410256410256%]"
+          aria-hidden="true"
+        >
+          <div className="grad-white w-full h-full absolute inset-0 m-auto"></div>
         </div>
-        <div className="max-w-lg mx-auto lg:mx-0 mb-8 sm:mb-14 lg:mb-0">
-          <img
-            className="w-full mb-2"
-            src="https://dqvy7r6i5k0tc.cloudfront.net/titleHero.svg"
-            alt="title"
-            loading="lazy"
-            decoding="async"
-            width={464}
-            height={134}
-          />
-          <h1 className="text-2xl text-center lg:text-left lg:text-5xl mb-8">
-            Convention of Digital Entrepreneurs
-          </h1>
+        <div className="max-w-7xl mx-auto px-4 lg:px-10 relative z-20 lg:pb-0">
+          <div className="flex justify-between lg:min-h-[448px]">
+            <div className="relative z-10 py-6 md:py-12">
+              <h1 className="w-[80%] text-primary-gray  lg:max-w-3xl font-semibold text-3xl lg:text-6xl lg:leading-[70px]">
+                Build Your{" "}
+                <span className="text-primary-purple"> Perfect Body </span> With
+                Us
+              </h1>
+              <p className="text-xl text-primary-gray mt-4 hidden lg:block lg:max-w-lg">
+                Lets food be the medicine and medicine be the food
+              </p>
+              <button
+                className={`${poppins.className} bg-primary-purple hover:bg-primary-purple/90 font-semibold text-white text-base px-7 py-4 rounded-full my-6`}
+              >
+                Enquire Now
+              </button>
+            </div>
+          </div>
+          <div
+            className="absolute top-0 z-40 right-14 lg:right-0 h-full mlg:max-w-[300px] lg:max-w-[350px] xl:max-w-[410px] hidden lg:block"
+            aria-hidden="true"
+          >
+            <img src="/bg/header-img.png" />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

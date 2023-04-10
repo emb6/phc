@@ -16,6 +16,7 @@ module.exports = {
         "secondary-gray": "#CDCDCD",
         "secondary-dark-gray": "#454545",
         "primary-light-gray": "#F4F4F4",
+        "primary-orange": "#FF9222",
       },
       screens: {
         xs: "576px",
