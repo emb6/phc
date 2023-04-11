@@ -8,103 +8,15 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 const serviceList = [
   {
-    day: "Day 1",
-    date: `<span class="font-semibold">10</span> June, Saturday`,
-    lists: [
-      {
-        id: nanoid(),
-        time: "11:00 AM to 2:00 PM",
-        venue: "Hall No. 5",
-        title: "MarTech Summit",
-        description:
-          "The MarTech Summit is set to witness enthralling discussions and keynotes from top marketers across the globe! ",
-        speakers: [
-          { id: nanoid(), img: "/speaker_2.png", name: "" },
-          { id: nanoid(), img: "/speaker_1.png", name: "" },
-        ],
-      },
-      {
-        id: nanoid(),
-        time: "3:00 PM to 6:00 PM",
-        venue: "Hall No. 5",
-        title: "HR Tech Summit",
-        description:
-          "An evening dedicated to discussions on enhancing HR roles and responsibilities with the latest tech trend. ",
-        speakers: [],
-      },
-      {
-        id: nanoid(),
-        time: "11:00 AM to 5:00 PM ",
-        venue: "Hall No. 5",
-        title: "Flash",
-        description:
-          "One-on-one meetings to pitch your ideas to the biggest investor, mentor and VC and a chance to secure your next big round. ",
-        speakers: [],
-      },
-      {
-        id: nanoid(),
-        time: "11:00 AM to 5:00 PM",
-        venue: "Hall No. 5",
-        title: "Showcase",
-        description:
-          "A chance to feature your company to an audience of 15000+ and build brand awareness and visibility for your venture. ",
-        speakers: [],
-      },
-      {
-        id: nanoid(),
-        time: "10:00 AM to 6:00 PM ",
-        venue: "Hall No. 5",
-        title: "Exhibition",
-        description:
-          "Feature your company at the biggest tech and marketing exhibition ever and ace your business milestones at CODE. ",
-        speakers: [],
-      },
-    ],
+    name: "Description",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
   },
+
   {
-    day: "Day 2",
-    date: `<span class="font-semibold">11</span> June, Sunday`,
-    lists: [
-      {
-        id: nanoid(),
-        time: "11:00 AM to 3:00 PM ",
-        venue: "Hall No. 5",
-        title: "Unicorns",
-        description:
-          "A conference featuring the biggest leaders in the digital space come together to share industry insights and views on trending tech and marketing narratives. ",
-        speakers: [
-          { id: nanoid(), img: "/speaker_4.png", name: "" },
-          { id: nanoid(), img: "/speaker_3.png", name: "" },
-        ],
-      },
-      {
-        id: nanoid(),
-        time: "11:00 AM to 5:00 PM ",
-        venue: "Hall No. 5",
-        title: "Flash ",
-        description:
-          "One-on-one meetings to pitch your ideas to the biggest investor, mentor and VC and a chance to secure your next big round.",
-        speakers: [],
-      },
-      {
-        id: nanoid(),
-        time: "11:00 AM to 5:00 PM",
-        venue: "Hall No. 5",
-        title: "Showcase",
-        description:
-          "A chance to feature your company to an audience of 15000+ and build brand awareness and visibility for your venture.",
-        speakers: [],
-      },
-      {
-        id: nanoid(),
-        time: "10:00 AM to 6:00 PM ",
-        venue: "Hall No. 5",
-        title: "Exhibition ",
-        description:
-          "Feature your company at the biggest tech and marketing exhibition ever and ace your business milestones at CODE. ",
-        speakers: [],
-      },
-    ],
+    name: "Additonal Information",
+    content:
+      "sdf sdfsdfsdf sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
   },
 ];
 
@@ -235,25 +147,20 @@ export default function ProductDetailTab() {
                   onClick={onChange(index, item)}
                   className={`${poppins.className} ${
                     active === index
-                      ? "text-primary-blue"
+                      ? "text-primary-purple"
                       : "text-primary-gray/30"
                   } border-b-4 border-b-primary-gray/30 text-lg py-3 pr-5 font-semibold cursor-pointer w-1/2`}
                 >
                   <div
                     className={`${poppins.className} max-w-full font-normal text-sm lg:text-2xl mb-5 flex flex-col gap-2 md:gap-5 `}
                   >
-                    <p>{item.day}</p>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: item?.date,
-                      }}
-                    ></p>
+                    <p>{item.name}</p>
                   </div>
                 </div>
                 // border-b-primary-green
               ))}
               <div
-                className={`bg-primary-green h-1 w-1/2 absolute bottom-0 left-0 transition-all ${
+                className={`bg-primary-orange h-1 w-1/2 absolute bottom-0 left-0 transition-all ${
                   active === 0 ? "translate-x-[0]" : "translate-x-[100%]"
                 }`}
               ></div>
@@ -261,86 +168,7 @@ export default function ProductDetailTab() {
 
             <div className="flex mt-10 max-w-7xl mx-auto">
               <div className="px-5">
-                <div className="relative flex md:pl-[200px] lg:pl-[300px]">
-                  <ol className="relative border-l-[0.5px] border-primary-green">
-                    {serviceList[active]?.lists?.map((item, index) => (
-                      <li className="relative mb-10 ml-6" key={item.id}>
-                        <div
-                          className={` ${poppins.className} hidden md:flex absolute -left-[12rem] lg:-left-[21rem] top-4 w-[300px] flex-col gap-5`}
-                        >
-                          <div>
-                            <p className="font-light text-[#5B5B5B]">Timings</p>
-                            <time className="text-base lg:text-2xl font-normal">
-                              {item.time}
-                            </time>
-                          </div>
-                          <div>
-                            <p className="-left-16 font-light text-[#5B5B5B]">
-                              Venue
-                            </p>
-                            <p className="text-base lg:text-2xl font-normal">
-                              {item.venue}
-                            </p>
-                          </div>
-                        </div>
-
-                        <span
-                          className={` ${poppins.className} absolute flex items-center text-white justify-center w-8 h-8 bg-primary-green rounded-full -left-10 ring-8 ring-white`}
-                        >
-                          {index + 1}
-                        </span>
-                        <div>
-                          <div
-                            className={` ${poppins.className} text-sm font-semibold md:hidden`}
-                          >
-                            <div>
-                              <span className="mr-2">Timings</span>
-                              <time className=" font-normal">{item.time}</time>
-                            </div>
-                            <div>
-                              <span className="mr-2 ">Venue :</span>
-                              <span className=" font-normal">{item.venue}</span>
-                            </div>
-                          </div>
-
-                          <h3 className="my-1 lg:pl-8 text-base md:text-lg font-semibold text-gray-900">
-                            {item.title}
-                          </h3>
-
-                          <p className="text-sm lg:pl-8 md:text-base font-normal text-gray-500 ">
-                            {item.description}
-                          </p>
-                        </div>
-
-                        {item?.speakers.length ? (
-                          <div className="mt-5 lg:pl-8">
-                            <h4
-                              className={`${poppins.className} mb-3 md:mb-1 text-sm md:text-lg font-normal text-primary-green`}
-                            >
-                              Speakers
-                            </h4>
-                            <div className="">
-                              <ol className="flex gap-2">
-                                {item.speakers.map((data, idx) => (
-                                  <li className="rounded-full" key={data.id}>
-                                    <img
-                                      src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}${data.img}`}
-                                      alt=""
-                                      loading="lazy"
-                                      decoding="async"
-                                    />
-                                  </li>
-                                ))}
-                              </ol>
-                            </div>
-                          </div>
-                        ) : (
-                          <div className="h-[92px]"></div>
-                        )}
-                      </li>
-                    ))}
-                  </ol>
-                </div>
+                <p>{serviceList[active]?.content}</p>
               </div>
             </div>
           </div>
