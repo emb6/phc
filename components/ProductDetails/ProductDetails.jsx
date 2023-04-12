@@ -20,11 +20,33 @@ const serviceList = [
   },
 ];
 
+const priceList = [
+  {
+    id: nanoid(),
+    weight: "400gm",
+    price: "500.00",
+    strike_price: "799",
+    in_stock: true,
+  },
+  {
+    id: nanoid(),
+    weight: "1 kg",
+    price: "999.00",
+    strike_price: "1499",
+    in_stock: false,
+  },
+];
+
 export default function ProductDetailTab() {
   const [active, setActive] = useState(0);
-
   const onChange = (index) => () => {
     setActive(index);
+  };
+
+  const [activePrice, setActivePrice] = useState(0);
+
+  const priceOnChange = (index) => () => {
+    setActivePrice(index);
   };
 
   return (
@@ -100,16 +122,47 @@ export default function ProductDetailTab() {
                 </p>
               </div>
               <div className={` ${poppins.className} mt-5`}>
-                <div className="bg-gray-100 w-[100px] text-center p-2 my-3">
-                  <span className="font-semibold text-primary-purple">
-                    IN STOCK
-                  </span>
+                <div className=" p-2 my-3">
+                  <span className="font-semibold">Select gram : </span>
                 </div>
+                <div className="flex gap-5">
+                  {priceList.map((item, idx) => (
+                    <div
+                      key={item?.id}
+                      onClick={priceOnChange(idx, item)}
+                      className={`p-2 bg-gray-50 min-w-[80px] text-center border shadow-md rounded-md cursor-pointer  ${
+                        activePrice === idx
+                          ? "font-bold  border-purple-500"
+                          : ""
+                      }`}
+                    >
+                      {item?.weight}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className={` ${poppins.className} mt-3 ml-1`}>
                 <div className="flex flex-start items-center gap-5">
-                  <span className="font-semibold text-4xl">₹ 12.00</span>
-                  <span className="text-red-600 line-through text-2xl">
-                    ₹ 12.00
+                  <span className="font-semibold text-4xl">
+                    ₹ {priceList[activePrice]?.price}
                   </span>
+                  <span className="text-red-600 line-through text-2xl">
+                    ₹ {priceList[activePrice]?.strike_price}
+                  </span>
+
+                  {priceList[activePrice]?.in_stock === true ? (
+                    <div className="bg-orange-400 w-[80px] text-center p-1 my-2 rounded-md">
+                      <span className="font-semibold text-white text-xs">
+                        IN STOCK
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="bg-red-400 w-[120px] text-center p-1 my-2 rounded-md">
+                      <span className="font-semibold text-white text-xs">
+                        OUT OF STOCK
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
               <p className="py-5 text-gray-500">
