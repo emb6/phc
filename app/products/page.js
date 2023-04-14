@@ -1,5 +1,6 @@
 "use client";
 import ProductDetails from "@/components/ProductDetails";
+import RelatedProducts from "@/components/RelatedProducts";
 import React from "react";
 
 export default function page() {
@@ -81,6 +82,7 @@ export default function page() {
         </div>
       </div>
       <ProductDetails />
+      <RelatedProducts />
     </>
   );
 }
