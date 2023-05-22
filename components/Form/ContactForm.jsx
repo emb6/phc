@@ -16,6 +16,7 @@ const initialState = {
   mobile: {},
   email: "",
   message: "",
+  newsletter: true,
 };
 
 export default function ContactForm() {
@@ -30,6 +31,7 @@ export default function ContactForm() {
       bodyFormData.append("Email", values.email);
       bodyFormData.append("Contact", values.mobile);
       bodyFormData.append("Message", values.message);
+      bodyFormData.append("Newsletter", values.newsletter);
       // fetch(
       //   "https://script.google.com/macros/s/AKfycbyqFyvRh3hPDnwApQsKsjKKKoexdNo770NNoKhBSlORnGYQHgxPObKLVfKId8iu-zFr/exec",
       //   {
@@ -183,7 +185,15 @@ export default function ContactForm() {
               </div>
               <div class="flex flex-wrap text-start -mx-3 mb-6 px-5">
                 <label class="md:w-2/3 block text-gray-500 font-bold">
-                  <input class="mr-2 leading-tight" type="checkbox" checked />
+                  <input
+                    class="mr-2 leading-tight"
+                    type="checkbox"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.newsletter}
+                    name="newsletter"
+                    checked={formik.values.newsletter === true ? "checked" : ""}
+                  />
                   <span class="text-sm">Send me your newsletter!</span>
                 </label>
               </div>
