@@ -3,6 +3,7 @@ import React from "react";
 import { Poppins } from "next/font/google";
 import { formValidation } from "@/Utils/validations";
 import { useFormik } from "formik";
+import axios from "axios";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,7 +23,36 @@ export default function ContactForm() {
     initialValues: initialState,
     validationSchema: formValidation,
     onSubmit: (values) => {
+      // debugger;
       console.log("Data", values);
+      const bodyFormData = new FormData();
+      bodyFormData.append("Name", values.first_name + " " + values.last_name);
+      bodyFormData.append("Email", values.email);
+      bodyFormData.append("Contact", values.mobile);
+      bodyFormData.append("Message", values.message);
+      // fetch(
+      //   "https://script.google.com/macros/s/AKfycbyqFyvRh3hPDnwApQsKsjKKKoexdNo770NNoKhBSlORnGYQHgxPObKLVfKId8iu-zFr/exec",
+      //   {
+      //     method: "POST",
+      //     body: bodyFormData,
+      //   }
+      // )
+      //   .then((res) => res.json())
+      //   .then((res) => {
+      //     console.log(res);
+      //   });
+      axios({
+        method: "post",
+        url: "https://script.google.com/macros/s/AKfycbyqFyvRh3hPDnwApQsKsjKKKoexdNo770NNoKhBSlORnGYQHgxPObKLVfKId8iu-zFr/exec",
+        data: bodyFormData,
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+        .then((response) => {
+          console.log("Response", response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     },
   });
   // console.log("Data", formik.values);
