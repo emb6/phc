@@ -28,10 +28,10 @@ const productData = [
   {
     image: "https://purablehealthcare.com/img/shop/img7.jpg",
     name: "Purwhey Powder",
-    description: "",
+    description: "High protein from quality whey, supports faster recovery",
     sale_price: "₹1199.00",
     strike_price: "",
-    offer: "",
+    offer: "5% Off",
   },
 ];
 
@@ -58,14 +58,23 @@ export default function AboutProduct() {
 
   return (
     <>
-      <section className="px-5 md:py-10 lg:16 bg-[#684dc463]">
+      <section className="px-5 md:py-10 lg:16 bg-white">
         <div className="max-w-7xl mx-auto px-4 py-5 lg:px-10 lg:py-16">
+          <h2
+            className={`text-center font-semibold text-2xl lg:text-5xl ${poppins.className} text-primary-gray mb-7 `}
+          >
+            Our Products
+          </h2>
+          <p className={`${poppins.className} text-xl text-center mb-10`}>
+            Our product is fully personalized and well balanced for all age of
+            customers or adults.
+          </p>
           <Slider {...settings} className="lg:pb-16 ">
             {productData.map((item, index) => (
               <div className="custom-slide">
                 <div class="mt-11 w-80 mr-1 transform overflow-hidden rounded-lg bg-white dark:bg-slate-800 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
                   <img
-                    class="h-48 w-full object-cover object-center"
+                    class="h-full w-full object-cover object-center"
                     src={item.image}
                     alt="Product Image"
                   />

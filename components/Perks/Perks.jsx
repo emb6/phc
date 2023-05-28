@@ -12,7 +12,7 @@ const poppins = Poppins({
 export default function Perks() {
   return (
     <>
-      <section className="px-5 md:py-10 lg:16 bg-primary-light-gray">
+      <section className="px-5 md:py-10 lg:16 bg-[#f19066]">
         <div className="max-w-7xl mx-auto px-4 py-5 lg:px-10 lg:py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-10 flex-wrap rounded-md">
             <div className=" bg-white w-full justify-center gap-5 md:gap-10 p-10 md:p-16 text-center rounded-md">

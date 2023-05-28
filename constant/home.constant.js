@@ -2,19 +2,19 @@ import { nanoid } from "nanoid";
 
 export const faq = [
   {
-    question: "Who can attend the Marketing Summit?",
+    question: "What is the meaning of Lorem ipsum?",
     answer:
-      "Marketing professionals, business founders, CXOs, and anyone interested in understand and building marketing can register for the summit. ",
+      "Literally it does not mean anything. It is a sequence of words without a sense of Latin derivation that make up a text also known as filler text, fictitious, blind or placeholder",
   },
   {
-    question: "When is the Marketing Summit?",
+    question: "What is the most used version?",
     answer:
-      "Marketing Summit will take place on June 10th, 2023, at Pragati Maidan, New Delhi.",
+      "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
   {
-    question: "Can I buy the ticket on the spot?",
+    question: "How can I order this product?",
     answer:
-      "While on-spot registration and tickets will likely be available, we recommend you book your tickets beforehand through our website to avoid the chance of missing out.",
+      "Its origins date back to 45 BC. In fact, his words were randomly extracted from the De finibus bonorum et malorum , a classic of Latin literature written by Cicero over 2000 years ago.",
   },
 ];
 
