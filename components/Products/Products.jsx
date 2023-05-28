@@ -58,7 +58,7 @@ export default function AboutProduct() {
 
   return (
     <>
-      <section className="px-5 md:py-10 lg:16 bg-secondary-gray">
+      <section className="px-5 md:py-10 lg:16 bg-[#684dc463]">
         <div className="max-w-7xl mx-auto px-4 py-5 lg:px-10 lg:py-16">
           <Slider {...settings} className="lg:pb-16 ">
             {productData.map((item, index) => (

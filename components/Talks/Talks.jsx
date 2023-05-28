@@ -44,7 +44,7 @@ function Talks() {
             <div className="flex justify-center">
               <div className="w-[106px] md:w-[200px] lg:w-[358px]">
                 <img
-                  src="https://dr3u6z0sccp3n.cloudfront.net/image-01.jpeg"
+                  src="https://images.pexels.com/photos/3289711/pexels-photo-3289711.jpeg"
                   alt="user"
                   loading="lazy"
                   decoding="async"
@@ -55,23 +55,27 @@ function Talks() {
                 <p
                   className={`text-primary-gray py-2 lg:py-5 text-xs max-w-3xl md:text-base lg:text-xl slide-subtitle ${poppins.className}`}
                 >
-                  Expand My Business understood my requirements well and
-                  provided me with agencies that would fit my budget. They
-                  helped in making the preliminary screening process of multiple
-                  website developers very easy for me. I am extremely happy with
-                  the service and would highly recommend Expand My Business to
-                  all the budding entrepreneurs and anyone who is struggling to
-                  find the right website development agency for their business.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  euismod leo in rhoncus mattis. Quisque quis tellus sed odio
+                  consectetur consequat. Nam scelerisque vehicula congue. Cras
+                  vel ipsum cursus, varius odio id, maximus magna. Proin ut
+                  risus justo. Vestibulum ante ipsum primis in faucibus orci
+                  luctus et ultrices posuere cubilia curae; Integer at feugiat
+                  tellus, eget sollicitudin arcu. Pellentesque neque risus,
+                  lobortis a finibus ac, pharetra sed ex. Ut sit amet tortor
+                  pellentesque, hendrerit tortor non, placerat felis. Aliquam
+                  luctus turpis purus, quis varius eros aliquet nec. Donec sit
+                  amet dictum arcu.
                 </p>
                 <p
                   className={`text-primary-gray text-base hidden lg:block mt-4 slide-name ${poppins.className}`}
                 >
-                  Divya Singh
+                  Client Name
                 </p>
                 <p
                   className={`text-primary-gray text-base hidden lg:block slide-name ${poppins.className}`}
                 >
-                  Founder - Skilldify
+                  Designation - Trainer
                 </p>
                 <div className="flex justify-end">
                   <QuoteEnd className="w-[23px] lg:w-[126px] lg:-mt-6 " />
@@ -83,7 +87,7 @@ function Talks() {
             <div className="flex">
               <div className="max-w-[106px] lg:max-w-[358px]">
                 <img
-                  src="https://dr3u6z0sccp3n.cloudfront.net/image-02.jpeg"
+                  src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg"
                   alt="user"
                   loading="lazy"
                   decoding="async"
@@ -95,24 +99,25 @@ function Talks() {
                 <p
                   className={`text-primary-gray py-2 lg:py-5 text-xs max-w-3xl lg:text-xl slide-subtitle ${poppins.className}`}
                 >
-                  Expand My Business is a unique one of its kind platform to
-                  connect b2b businesses. We started working with Expand My
-                  Business in September 2021 and our experience is getting
-                  better every day. The best part about the company is their
-                  executives are always available and ready for new challenges,
-                  moreover, they get more excited to see a new challenge rather
-                  than doing things the same traditional way. Divyansh and
-                  Rakshita are both very supportive and enthusiastic.
+                  Quisque quis tellus sed odio consectetur consequat. Nam
+                  scelerisque vehicula congue. Cras vel ipsum cursus, varius
+                  odio id, maximus magna. Proin ut risus justo. Vestibulum ante
+                  ipsum primis in faucibus orci luctus et ultrices posuere
+                  cubilia curae; Integer at feugiat tellus, eget sollicitudin
+                  arcu. Pellentesque neque risus, lobortis a finibus ac,
+                  pharetra sed ex. Ut sit amet tortor pellentesque, hendrerit
+                  tortor non, placerat felis. Aliquam luctus turpis purus, quis
+                  varius eros aliquet nec. Donec sit amet dictum arcu.
                 </p>
                 <p
                   className={`text-primary-gray text-base hidden lg:block mt-4 slide-name ${poppins.className}`}
                 >
-                  Shivam Gupta
+                  Client Name
                 </p>
                 <p
                   className={`text-primary-gray text-base hidden lg:block slide-name ${poppins.className}`}
                 >
-                  Founder - Shiv Jyoti Educational Group
+                  Designation - CEO - XYZ
                 </p>
                 <div className="flex justify-end">
                   <QuoteEnd className="w-[23px] lg:w-[126px] lg:-mt-6 " />
@@ -124,7 +129,7 @@ function Talks() {
             <div className="flex">
               <div className="max-w-[106px] lg:max-w-[358px]">
                 <img
-                  src="https://dr3u6z0sccp3n.cloudfront.net/image-03.jpeg"
+                  src="https://images.pexels.com/photos/2853592/pexels-photo-2853592.jpeg"
                   alt="user"
                   loading="lazy"
                   decoding="async"
@@ -136,24 +141,25 @@ function Talks() {
                 <p
                   className={`text-primary-gray py-2 lg:py-5 text-xs max-w-3xl lg:text-xl slide-subtitle ${poppins.className}`}
                 >
-                  I highly recommended Expand My Business to anyone looking for
-                  the support they provided. They are extremely professional,
-                  dedicated and supportive. They did an exceptional job in
-                  understanding my business requirements and connecting me to
-                  talented, experienced, passionate and professional technology
-                  partners. They did a thorough job in discussing with partners
-                  and were there to assist me and give their feedback on all
-                  partner calls.
+                  . Nam scelerisque vehicula congue. Cras vel ipsum cursus,
+                  varius odio id, maximus magna. Proin ut risus justo.
+                  Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia curae; Integer at feugiat tellus,
+                  eget sollicitudin arcu. Pellentesque neque risus, lobortis a
+                  finibus ac, pharetra sed ex. Ut sit amet tortor pellentesque,
+                  hendrerit tortor non, placerat felis. Aliquam luctus turpis
+                  purus, quis varius eros aliquet nec. Donec sit amet dictum
+                  arcu.
                 </p>
                 <p
                   className={`text-primary-gray text-base hidden lg:block mt-4 slide-name ${poppins.className}`}
                 >
-                  Urvisha Koradia
+                  Client Name
                 </p>
                 <p
                   className={`text-primary-gray text-base hidden lg:block slide-name ${poppins.className}`}
                 >
-                  Founder - Pitchbooks
+                  Designation - Model
                 </p>
                 <div className="flex justify-end">
                   <QuoteEnd className="w-[23px] lg:w-[126px] lg:-mt-6 " />
