@@ -71,7 +71,7 @@ export default function AboutProduct() {
           </p>
           <Slider {...settings} className="lg:pb-16 ">
             {productData.map((item, index) => (
-              <div className="custom-slide">
+              <div className="custom-slide" key={index}>
                 <div class="mt-11 w-80 mr-1 transform overflow-hidden rounded-lg bg-white dark:bg-slate-800 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
                   <img
                     class="h-full w-full object-cover object-center"

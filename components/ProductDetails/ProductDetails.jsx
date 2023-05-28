@@ -181,7 +181,7 @@ export default function ProductDetailTab() {
                     mass & support anabolism
                   </li>
                   <li> Increases pharmacological response</li>
-                  <li>Contains BCAA's for faster tissue regeneration</li>
+                  <li>Contains BCAA&apos;s for faster tissue regeneration</li>
                   <li>Provides Omega 3 & Omega 6 fatty acids</li>
                   <li>Fulfils increased nutritional requirements</li>
                   <li>Gluten free & preservative free</li>
