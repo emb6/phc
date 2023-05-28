@@ -34,7 +34,7 @@ export default function Header() {
       <header className="border-b border-secondary-gray bg-white z-[99] sticky top-0">
         <div className="max-w-7xl w-full mx-auto hidden md:flex items-center justify-between px-4 py-4">
           <a href="/" aria-label="logo">
-            <CodeIcon className={"text-primary-purple w-12"} />
+            <img src="purable-logo.png" width="120" height="40" />
           </a>
           <nav>
             <ul className="flex gap-6 items-center">
@@ -59,14 +59,14 @@ export default function Header() {
                       : "after:bg-white"
                   } hover:after:bg-primary-purple after:transition-all after:h-[2px] transition-all after:w-full after:absolute after:-bottom-2 after:left-0 relative uppercase font-semibold text-sm px-1`}
                 >
-                  ABOUT CODE
+                  ABOUT US
                 </a>
               </li>
               <li className="relative group">
                 <button
                   className={`${poppins.className} transition-all relative flex items-center uppercase font-semibold text-sm px-1`}
                 >
-                  EVENTS
+                  Products
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="11"
@@ -85,18 +85,10 @@ export default function Header() {
                   <ul>
                     <li>
                       <a
-                        href="/events/flash"
-                        className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
-                      >
-                        Flash
-                      </a>
-                    </li>
-                    <li>
-                      <a
                         href="/events/unicorn"
                         className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
                       >
-                        Unicorns
+                        Neofeed
                       </a>
                     </li>
                     <li>
@@ -104,23 +96,15 @@ export default function Header() {
                         href="/events/people-summit"
                         className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
                       >
-                        HR Tech Summit
+                        Purwhey
                       </a>
                     </li>
                     <li>
                       <a
-                        href="/events/marketing-summit"
+                        href="/events/flash"
                         className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
                       >
-                        MarTech Summit
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/exhibition"
-                        className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
-                      >
-                        Exhibition
+                        Puralbumen
                       </a>
                     </li>
                   </ul>
@@ -138,7 +122,7 @@ export default function Header() {
         </div>
         <div className="flex md:hidden px-4 justify-between items-center">
           <a href="/" aria-label="logo">
-            <CodeIcon className={"text-primary-purple w-9"} />
+            <img src="purable-logo.png" width="120" height="40" />
           </a>
           <button
             onClick={toggleMenu}
@@ -177,7 +161,7 @@ export default function Header() {
                   pathname === "/" ? "" : ""
                 }  relative uppercase font-semibold text-base mb-2 py-4 block px-1`}
               >
-                home
+                Home
               </a>
             </li>
             <li>
@@ -187,7 +171,7 @@ export default function Header() {
                   pathname === "/event" ? "" : ""
                 }  relative uppercase font-semibold text-base mb-2 py-4 block px-1`}
               >
-                ABOUT CODE
+                ABOUT US
               </a>
             </li>
             <li>
@@ -197,7 +181,7 @@ export default function Header() {
                   pathname === "/event" ? "" : ""
                 }  relative uppercase font-semibold flex items-center justify-between text-base mb-2 w-full py-4  px-1`}
               >
-                EVENTS{" "}
+                PRODUCTS
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="11"
@@ -218,32 +202,17 @@ export default function Header() {
                 <ul>
                   <li>
                     <a href="/events/flash" className="py-2 block">
-                      Flash
+                      Neofeed
                     </a>
                   </li>
                   <li>
                     <a href="/events/unicorn" className="py-2 block">
-                      Unicorns
+                      Purwhey
                     </a>
                   </li>
                   <li>
                     <a href="/events/people-summit" className="py-2 block">
-                      HR Tech Summit
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/events/marketing-summit" className="py-2 block">
-                      MarTech Summit
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/events/marketing-summit" className="py-2 block">
-                      MarTech Summit
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/exhibition" className="py-2 block">
-                      Exhibition
+                      Puralbumen
                     </a>
                   </li>
                 </ul>
@@ -253,7 +222,7 @@ export default function Header() {
               <button
                 className={`${poppins.className} mt-4 bg-primary-purple hover:bg-primary-purple/90 font-semibold text-white text-base px-7 py-2.5 rounded-full w-full`}
               >
-                Reserve spot
+                Enquire Now
               </button>
             </li>
           </ul>
