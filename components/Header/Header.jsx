@@ -85,7 +85,7 @@ export default function Header() {
                   <ul>
                     <li>
                       <a
-                        href="/products"
+                        href="/products/neofeed"
                         className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
                       >
                         Neofeed
@@ -93,7 +93,7 @@ export default function Header() {
                     </li>
                     <li>
                       <a
-                        href="/products"
+                        href="/products/purwhey"
                         className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
                       >
                         Purwhey
@@ -101,7 +101,7 @@ export default function Header() {
                     </li>
                     <li>
                       <a
-                        href="/products"
+                        href="/products/puralbumen"
                         className="py-2 block border-b-2 transition-all border-transparent hover:border-primary-purple"
                       >
                         Puralbumen
@@ -201,17 +201,17 @@ export default function Header() {
               <div className={`${expanded ? "" : "hidden"} px-4`}>
                 <ul>
                   <li>
-                    <a href="/products" className="py-2 block">
+                    <a href="/products/neofeed" className="py-2 block">
                       Neofeed
                     </a>
                   </li>
                   <li>
-                    <a href="/products" className="py-2 block">
+                    <a href="/products/purwhey" className="py-2 block">
                       Purwhey
                     </a>
                   </li>
                   <li>
-                    <a href="/products" className="py-2 block">
+                    <a href="/products/puralbumen" className="py-2 block">
                       Puralbumen
                     </a>
                   </li>

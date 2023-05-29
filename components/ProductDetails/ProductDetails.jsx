@@ -3,11 +3,12 @@ import React, { useState, useRef } from "react";
 import { Poppins } from "next/font/google";
 import Rupee from "../Icons/Rupee";
 import { nanoid } from "nanoid";
-import { products } from "@/Utils/Data/Products.data";
+// import { products } from "@/Utils/Data/Products.data";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
-export default function ProductDetailTab() {
+export default function ProductDetailTab(props) {
+  const { title, slug, product_details } = props.data;
   const [active, setActive] = useState(0);
   const onChange = (index) => () => {
     setActive(index);
@@ -19,7 +20,7 @@ export default function ProductDetailTab() {
     setActivePrice(index);
   };
 
-  console.log("asdfsdf", products);
+  console.log("Props", props);
   return (
     <>
       <section className="py-20 bg-white">
@@ -27,16 +28,14 @@ export default function ProductDetailTab() {
           <div className="flex  justify-center gap-10">
             <div className="flex items-center shadow-lg rounded-md ">
               <img
-                src={products[0]?.product_details?.image}
-                alt={products[0]?.product_details?.title}
+                src={product_details?.image}
+                alt={title}
                 width={587}
                 height="auto"
               />
             </div>
             <div className={` ${poppins.className} flex-1`}>
-              <h1 className="font-semibold text-xl pb-2">
-                {products[0]?.product_details?.title}
-              </h1>
+              <h1 className="font-semibold text-xl pb-2">{title}</h1>
               <div className="flex items-center">
                 <svg
                   aria-hidden="true"
@@ -97,7 +96,7 @@ export default function ProductDetailTab() {
                   <span className="font-semibold">Select gram : </span>
                 </div>
                 <div className="flex gap-5">
-                  {products[0]?.product_details?.priceList.map((item, idx) => (
+                  {product_details?.priceList?.map((item, idx) => (
                     <div
                       key={item?.id}
                       onClick={priceOnChange(idx, item)}
@@ -115,22 +114,14 @@ export default function ProductDetailTab() {
               <div className={` ${poppins.className} mt-3 ml-1`}>
                 <div className="flex flex-start items-center gap-5">
                   <span className="font-semibold text-4xl">
-                    ₹{" "}
-                    {
-                      products[0]?.product_details?.priceList[activePrice]
-                        ?.price
-                    }
+                    ₹ {product_details?.priceList[activePrice]?.price}
                   </span>
                   <span className="text-red-600 line-through text-2xl">
-                    ₹{" "}
-                    {
-                      products[0]?.product_details?.priceList[activePrice]
-                        ?.strike_price
-                    }
+                    ₹ {product_details?.priceList[activePrice]?.strike_price}
                   </span>
 
-                  {products[0]?.product_details?.priceList[activePrice]
-                    ?.in_stock === true ? (
+                  {product_details?.priceList[activePrice]?.in_stock ===
+                  true ? (
                     <div className="bg-orange-400 w-[80px] text-center p-1 my-2 rounded-md">
                       <span className="font-semibold text-white text-xs">
                         IN STOCK
@@ -153,7 +144,7 @@ export default function ProductDetailTab() {
               <div className="text-gray-500">
                 <p className="pb-2 font-semibold">Benefits:</p>
                 <ui className="leading-[2rem] list-image-[url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNCAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSIjMzhiZGY4Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy42ODUuMTUzYS43NTIuNzUyIDAgMCAxIC4xNDMgMS4wNTJsLTggMTAuNWEuNzUuNzUgMCAwIDEtMS4xMjcuMDc1bC00LjUtNC41YS43NS43NSAwIDAgMSAxLjA2LTEuMDZsMy44OTQgMy44OTMgNy40OC05LjgxN2EuNzUuNzUgMCAwIDEgMS4wNS0uMTQzWiIgLz48L3N2Zz4=)]">
-                  {products[0]?.product_details?.benefits.map((list, idx) => (
+                  {product_details?.benefits.map((list, idx) => (
                     <li key={list}>{list}</li>
                   ))}
                 </ui>
@@ -164,7 +155,7 @@ export default function ProductDetailTab() {
           {/* /tab code */}
           <div className="max-w-7xl mx-auto mt-12">
             <div className="flex w-full relative">
-              {products[0]?.product_details?.tab_details?.map((item, index) => (
+              {product_details?.tab_details?.map((item, index) => (
                 <div
                   key={item}
                   onClick={onChange(index, item)}
@@ -192,18 +183,10 @@ export default function ProductDetailTab() {
             <div className="flex mt-10 max-w-7xl mx-auto">
               <div className="px-5">
                 {/* <p>{tab_details[active]?.content}</p> */}
-                {"content" in
-                products[0]?.product_details?.tab_details[active] ? (
-                  <p>
-                    {products[0]?.product_details?.tab_details[active]?.content}
-                  </p>
+                {"content" in product_details?.tab_details[active] ? (
+                  <p>{product_details?.tab_details[active]?.content}</p>
                 ) : (
-                  <img
-                    src={
-                      products[0]?.product_details?.tab_details[active]
-                        ?.table_img
-                    }
-                  />
+                  <img src={product_details?.tab_details[active]?.table_img} />
                 )}
               </div>
             </div>

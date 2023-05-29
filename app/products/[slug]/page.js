@@ -1,11 +1,19 @@
 "use client";
+import React from "react";
 import ProductDetails from "@/components/ProductDetails";
 import RelatedProducts from "@/components/RelatedProducts";
-import React from "react";
+import { useParams } from "next/navigation";
+import { products } from "@/Utils/Data/Products.data";
 
 export default function page() {
+  const params = useParams();
+  const data = products.find((item) => item.slug === params.slug);
+
+  console.log(data);
+
   return (
     <>
+      {/* Slug: {params.slug} */}
       <div
         className="py-20 h-[400px]"
         style={{
@@ -81,7 +89,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <ProductDetails />
+      <ProductDetails data={data} />
       <RelatedProducts />
     </>
   );
