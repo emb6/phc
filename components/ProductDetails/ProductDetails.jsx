@@ -3,39 +3,9 @@ import React, { useState, useRef } from "react";
 import { Poppins } from "next/font/google";
 import Rupee from "../Icons/Rupee";
 import { nanoid } from "nanoid";
+import { products } from "@/Utils/Data/Products.data";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
-
-const serviceList = [
-  {
-    name: "Description",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-  },
-
-  {
-    name: "Additonal Information",
-    table_img:
-      "https://themeim.com/demo/vaxin/demo-one/media/images/banner-two/nutrition-fact.png",
-  },
-];
-
-const priceList = [
-  {
-    id: nanoid(),
-    weight: "400gm",
-    price: "500.00",
-    strike_price: "799",
-    in_stock: true,
-  },
-  {
-    id: nanoid(),
-    weight: "1 kg",
-    price: "999.00",
-    strike_price: "1499",
-    in_stock: false,
-  },
-];
 
 export default function ProductDetailTab() {
   const [active, setActive] = useState(0);
@@ -49,6 +19,7 @@ export default function ProductDetailTab() {
     setActivePrice(index);
   };
 
+  console.log("asdfsdf", products);
   return (
     <>
       <section className="py-20 bg-white">
@@ -56,15 +27,15 @@ export default function ProductDetailTab() {
           <div className="flex  justify-center gap-10">
             <div className="flex items-center shadow-lg rounded-md ">
               <img
-                src="https://purablehealthcare.com/img/shop/img6.jpg"
-                alt=""
+                src={products[0]?.product_details?.image}
+                alt={products[0]?.product_details?.title}
                 width={587}
                 height="auto"
               />
             </div>
             <div className={` ${poppins.className} flex-1`}>
               <h1 className="font-semibold text-xl pb-2">
-                Vaxin Regular (500mg), Mild Intake Lorem Ipsum Dolor
+                {products[0]?.product_details?.title}
               </h1>
               <div className="flex items-center">
                 <svg
@@ -126,7 +97,7 @@ export default function ProductDetailTab() {
                   <span className="font-semibold">Select gram : </span>
                 </div>
                 <div className="flex gap-5">
-                  {priceList.map((item, idx) => (
+                  {products[0]?.product_details?.priceList.map((item, idx) => (
                     <div
                       key={item?.id}
                       onClick={priceOnChange(idx, item)}
@@ -144,13 +115,22 @@ export default function ProductDetailTab() {
               <div className={` ${poppins.className} mt-3 ml-1`}>
                 <div className="flex flex-start items-center gap-5">
                   <span className="font-semibold text-4xl">
-                    ₹ {priceList[activePrice]?.price}
+                    ₹{" "}
+                    {
+                      products[0]?.product_details?.priceList[activePrice]
+                        ?.price
+                    }
                   </span>
                   <span className="text-red-600 line-through text-2xl">
-                    ₹ {priceList[activePrice]?.strike_price}
+                    ₹{" "}
+                    {
+                      products[0]?.product_details?.priceList[activePrice]
+                        ?.strike_price
+                    }
                   </span>
 
-                  {priceList[activePrice]?.in_stock === true ? (
+                  {products[0]?.product_details?.priceList[activePrice]
+                    ?.in_stock === true ? (
                     <div className="bg-orange-400 w-[80px] text-center p-1 my-2 rounded-md">
                       <span className="font-semibold text-white text-xs">
                         IN STOCK
@@ -173,19 +153,9 @@ export default function ProductDetailTab() {
               <div className="text-gray-500">
                 <p className="pb-2 font-semibold">Benefits:</p>
                 <ui className="leading-[2rem] list-image-[url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNCAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSIjMzhiZGY4Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy42ODUuMTUzYS43NTIuNzUyIDAgMCAxIC4xNDMgMS4wNTJsLTggMTAuNWEuNzUuNzUgMCAwIDEtMS4xMjcuMDc1bC00LjUtNC41YS43NS43NSAwIDAgMSAxLjA2LTEuMDZsMy44OTQgMy44OTMgNy40OC05LjgxN2EuNzUuNzUgMCAwIDEgMS4wNS0uMTQzWiIgLz48L3N2Zz4=)]">
-                  <li>
-                    High protein from quality whey, supports faster recovery
-                  </li>
-                  <li>
-                    Maintain positive N-Balance thus prevent loss of lean body
-                    mass & support anabolism
-                  </li>
-                  <li> Increases pharmacological response</li>
-                  <li>Contains BCAA&apos;s for faster tissue regeneration</li>
-                  <li>Provides Omega 3 & Omega 6 fatty acids</li>
-                  <li>Fulfils increased nutritional requirements</li>
-                  <li>Gluten free & preservative free</li>
-                  <li>Improves quality of life</li>
+                  {products[0]?.product_details?.benefits.map((list, idx) => (
+                    <li key={list}>{list}</li>
+                  ))}
                 </ui>
               </div>
             </div>
@@ -194,7 +164,7 @@ export default function ProductDetailTab() {
           {/* /tab code */}
           <div className="max-w-7xl mx-auto mt-12">
             <div className="flex w-full relative">
-              {serviceList?.map((item, index) => (
+              {products[0]?.product_details?.tab_details?.map((item, index) => (
                 <div
                   key={item}
                   onClick={onChange(index, item)}
@@ -221,11 +191,19 @@ export default function ProductDetailTab() {
 
             <div className="flex mt-10 max-w-7xl mx-auto">
               <div className="px-5">
-                {/* <p>{serviceList[active]?.content}</p> */}
-                {"content" in serviceList[active] ? (
-                  <p>{serviceList[active]?.content}</p>
+                {/* <p>{tab_details[active]?.content}</p> */}
+                {"content" in
+                products[0]?.product_details?.tab_details[active] ? (
+                  <p>
+                    {products[0]?.product_details?.tab_details[active]?.content}
+                  </p>
                 ) : (
-                  <img src={serviceList[active]?.table_img} />
+                  <img
+                    src={
+                      products[0]?.product_details?.tab_details[active]
+                        ?.table_img
+                    }
+                  />
                 )}
               </div>
             </div>
