@@ -34,7 +34,7 @@ export default function Header() {
       <header className="border-b border-secondary-gray bg-white z-[99] sticky top-0">
         <div className="max-w-7xl w-full mx-auto hidden md:flex items-center justify-between px-4 py-4">
           <a href="/" aria-label="logo">
-            <img src="purable-logo.png" width="120" height="40" />
+            <img src="/purable-logo.png" width="120" height="40" />
           </a>
           <nav>
             <ul className="flex gap-6 items-center">

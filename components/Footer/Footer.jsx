@@ -92,7 +92,7 @@ function Footer() {
               <div className="w-[150px] lg:w-[250px]">
                 <a href="/" aria-label="Purable Health Care">
                   <img
-                    src="footer_purable_logo.png"
+                    src="/footer_purable_logo.png"
                     className="w-full max-w-[240px] block"
                     alt="ExMyB"
                     loading="lazy"
