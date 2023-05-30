@@ -207,7 +207,7 @@ export default function ProductDetailTab(props) {
                           {product_details?.tab_details[
                             active
                           ]?.table_data?.column_data.map((item, idx) => (
-                            <tr>
+                            <tr key={idx}>
                               <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                 <div class="text-sm leading-5 text-gray-900">
                                   {item.nutrients}
