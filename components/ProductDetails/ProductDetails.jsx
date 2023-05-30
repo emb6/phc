@@ -3,7 +3,6 @@ import React, { useState, useRef } from "react";
 import { Poppins } from "next/font/google";
 import Rupee from "../Icons/Rupee";
 import { nanoid } from "nanoid";
-// import { products } from "@/Utils/Data/Products.data";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
