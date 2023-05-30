@@ -213,11 +213,15 @@ export default function ProductDetailTab(props) {
                                   {item.nutrients}
                                 </div>
                               </td>
-                              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                <div class="text-sm leading-5 text-gray-900">
-                                  {item.unit}
-                                </div>
-                              </td>
+                              {slug === "neofeed" ? (
+                                ""
+                              ) : (
+                                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                  <div class="text-sm leading-5 text-gray-900">
+                                    {item.unit}
+                                  </div>
+                                </td>
+                              )}
                               <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                 <div class="text-sm leading-5 text-gray-900">
                                   {item.per_100_gm}
