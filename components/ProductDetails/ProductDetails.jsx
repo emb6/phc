@@ -179,13 +179,61 @@ export default function ProductDetailTab(props) {
               ></div>
             </div>
 
-            <div className="flex mt-10 max-w-7xl mx-auto">
+            <div className="block mt-10">
               <div className="px-5">
                 {/* <p>{tab_details[active]?.content}</p> */}
                 {"content" in product_details?.tab_details[active] ? (
                   <p>{product_details?.tab_details[active]?.content}</p>
                 ) : (
-                  <img src={product_details?.tab_details[active]?.table_img} />
+                  // <img src={product_details?.tab_details[active]?.table_img} />
+                  <div class="-my-2 py-2 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                    <div class="align-middle inline-block w-full shadow overflow-x-auto sm:rounded-lg border-b border-gray-200">
+                      <table class="min-w-full">
+                        <thead>
+                          <tr class="bg-gray-50 border-b border-gray-200 text-xs leading-4 text-gray-500 uppercase tracking-wider">
+                            {product_details?.tab_details[
+                              active
+                            ]?.table_data?.column?.map((item, idx) => (
+                              <th
+                                class="px-6 py-3 text-left font-medium"
+                                key={idx}
+                              >
+                                {item?.column_name}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                          {product_details?.tab_details[
+                            active
+                          ]?.table_data?.column_data.map((item, idx) => (
+                            <tr>
+                              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                <div class="text-sm leading-5 text-gray-900">
+                                  {item.nutrients}
+                                </div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                <div class="text-sm leading-5 text-gray-900">
+                                  {item.unit}
+                                </div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                <div class="text-sm leading-5 text-gray-900">
+                                  {item.per_100_gm}
+                                </div>
+                              </td>
+                              <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                <div class="text-sm leading-5 text-gray-900">
+                                  {item.per_15_gm}
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
