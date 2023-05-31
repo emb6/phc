@@ -3,6 +3,7 @@ import CodeIcon from "../Icons/CodeIcon";
 import { Poppins } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "600"],
@@ -47,12 +48,12 @@ export default function Header() {
                       : "after:bg-white"
                   } hover:after:bg-primary-purple after:transition-all after:h-[2px] transition-all after:w-full after:absolute after:-bottom-2 after:left-0 relative uppercase font-semibold text-sm px-1`}
                 >
-                  home
+                  Home
                 </a>
               </li>
               <li>
                 <a
-                  href="/about"
+                  href="#about"
                   className={`${poppins.className} ${
                     pathname === "/about"
                       ? "after:bg-primary-purple"
@@ -61,6 +62,18 @@ export default function Header() {
                 >
                   ABOUT US
                 </a>
+              </li>
+              <li>
+                <Link
+                  href="#testimonial"
+                  className={`${poppins.className} ${
+                    pathname === "/about"
+                      ? "after:bg-primary-purple"
+                      : "after:bg-white"
+                  } hover:after:bg-primary-purple after:transition-all after:h-[2px] transition-all after:w-full after:absolute after:-bottom-2 after:left-0 relative uppercase font-semibold text-sm px-1`}
+                >
+                  Testimonial
+                </Link>
               </li>
               <li className="relative group">
                 <button
@@ -111,11 +124,13 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <button
-                  className={`${poppins.className} bg-primary-purple hover:bg-primary-purple/90 font-semibold text-white text-base px-7 py-4 rounded-full`}
-                >
-                  Enquire Now
-                </button>
+                <a href="#serviceForm">
+                  <button
+                    className={`${poppins.className} bg-primary-purple hover:bg-primary-purple/90 font-semibold text-white text-base px-7 py-4 rounded-full`}
+                  >
+                    Enquire Now
+                  </button>
+                </a>
               </li>
             </ul>
           </nav>
@@ -166,7 +181,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="/about"
+                href="/"
                 className={`${poppins.className} ${
                   pathname === "/event" ? "" : ""
                 }  relative uppercase font-semibold text-base mb-2 py-4 block px-1`}

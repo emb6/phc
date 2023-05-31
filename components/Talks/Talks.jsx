@@ -30,7 +30,10 @@ function Talks() {
     customPaging: (i) => <div className="h-1 w-10"></div>,
   };
   return (
-    <section className="bg-white relative overflow-hidden py-20">
+    <section
+      className="bg-white relative overflow-hidden py-20"
+      id="testimonial"
+    >
       {/* <GradArrow className="absolute left-0 h-full" /> */}
       <div className="max-w-7xl mx-auto px-4 py-5 lg:px-10 lg:py-16">
         <h2
