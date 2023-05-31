@@ -25,7 +25,7 @@ export default function Perks() {
                 FREE SHIPPING
               </h3>
               <p className={`${poppins.className} text-sm md:text-xl `}>
-                The founders/co-founders are 18+ years of age.
+                Shop with us and enjoy free shipping on all orders, hassle-free.
               </p>
             </div>
 
@@ -39,7 +39,7 @@ export default function Perks() {
                 MONEY BACK GUARANTEE
               </h3>
               <p className={`${poppins.className} text-sm md:text-xl `}>
-                The company has surpassed the pre-revenue and ideation phases.
+                Enjoy a 100% money-back guarantee on all purchases.
               </p>
             </div>
 
@@ -53,7 +53,8 @@ export default function Perks() {
                 GIFT DISCOUNT
               </h3>
               <p className={`${poppins.className} text-sm md:text-xl `}>
-                The latest round of funding does not stretch beyond Series A.
+                Get a special gift discount with your purchase - a little
+                something extra just for you!
               </p>
             </div>
           </div>

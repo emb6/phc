@@ -36,7 +36,7 @@ function Talks() {
         <h2
           className={`font-semibold text-xl md:text-3xl lg:text-5xl ${poppins.className} text-primary-gray mb-5 lg:mb-14`}
         >
-          Don&apos;t take just &apos;OUR&apos; word for it
+          What Our Clients Have to Say!
         </h2>
 
         <Slider {...settings} className="lg:pb-16 ">
