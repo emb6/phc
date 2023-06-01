@@ -4,6 +4,8 @@ import { Poppins } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Scroll from "react-scroll";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "600"],
@@ -29,6 +31,17 @@ export default function Header() {
       document.body.classList.remove("overflow-hidden");
     }
   }, [opened]);
+
+  function handleScroll(id) {
+    let scroll = Scroll.animateScroll;
+    const scrollElement = document.getElementById(id);
+    if (scrollElement.offsetTop && scroll.scrollTo) {
+      scroll.scrollTo(scrollElement.offsetTop - 0, {
+        smooth: true,
+        duration: 10,
+      });
+    }
+  }
 
   return (
     <>
@@ -65,7 +78,10 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="#testimonial"
+                  href=""
+                  onClick={() => {
+                    handleScroll("testimonial");
+                  }}
                   className={`${poppins.className} ${
                     pathname === "/about"
                       ? "after:bg-primary-purple"

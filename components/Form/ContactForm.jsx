@@ -65,15 +65,19 @@ export default function ContactForm() {
         <div className=" mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className={`h-[20rem] lg:h-[40rem] relative`}>
-              <img
-                src="https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg?"
-                alt="form"
-                className="absolute -z-10 object-cover object-left top-0 left-0 w-full h-full"
-                loading="lazy"
-                decoding="async"
-                width={4501}
-                height={4501}
-              />
+              <picture>
+                <source srcSet="/phc_form.avif" type="image/avif" />
+                <source srcSet="/phc_form.webp" type="image/webp" />
+                <img
+                  className="absolute -z-10 object-cover object-left top-0 left-0 w-full h-full"
+                  loading="lazy"
+                  decoding="async"
+                  src="/phc_form.jpg"
+                  alt=""
+                  width={589}
+                  height={307}
+                />
+              </picture>
               <div
                 className={`px-4 lg:p-20 flex flex-col justify-center h-full bg-primary-purple bg-opacity-30 `}
               >
